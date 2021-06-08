@@ -41,7 +41,7 @@
     
             <div class="pudelko" v-for='r in rows'>
                 <div v-for='c in columns'>
-                    <div class="cell" :class="{active: (active[0]==r && active[1]==c)}">
+                    <div class="cell":class="{active: (active[0]==r && active[1]==c)}" @click="active=[r,c]">
                         <p>{{r}},{{c}}</p>
                     </div>
                 </div>
@@ -58,7 +58,9 @@
                 rows: 10,
                 columns: 10,
                 active: [1, 1]
-            }
+            },
+
+          
         })
     </script>
 </body>
